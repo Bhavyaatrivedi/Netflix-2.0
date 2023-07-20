@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CardSlider from "./CardSlider";
+
 export default function Slider({ movies }) {
   const getMoviesFromRange = (from, to) => {
     return movies.slice(from, to);
