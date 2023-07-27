@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-//const userRoutes = require("./routes/UserRoutes");
+const userRoutes = require("./routes/UserRoutes");
 const mongoose = require("mongoose");
 
 const app = express();
@@ -26,7 +26,7 @@ const connectDatabase = () => {
 
 connectDatabase();
 
-// app.use("/api/user", userRoutes);
+ app.use("/api/user", userRoutes);
 
 app.listen(5000, () => {
   console.log("server started on port 5000");
